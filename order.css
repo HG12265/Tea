@@ -1,0 +1,111 @@
+*{
+  margin: 0px;
+}
+ #ordereditems {
+  font-size: 15px; /* Set to desired font size */
+  font-family: Arial, sans-serif; /* Optionally set a different font */
+  line-height: 1.5; 
+  text-align: center;          
+ }
+
+p{
+  font-size: 15px;
+}
+
+select{
+  font-size: 15px;
+  margin: 3px;       
+  width: 180px;        
+}
+p input{
+  font-size: 15px;
+  border: 1px solid black;    
+  background-color: white;  
+  width: 230px;
+  margin-top: 5px;
+}
+
+body{
+  background-color: lightgoldenrodyellow;
+}
+
+h1{
+  text-align: center;
+    background-color: lightsalmon;
+    width: 100%;
+    font-size: 60px;
+    border: 2px solid lightyellow;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+header{
+    display: flex;
+    background-color: lightcyan;
+    width: 100%;
+    height: 59px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+h2{
+    font-size: 23px;
+    margin: auto;
+}
+
+.logo{
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;           
+}
+
+h3{
+    margin-top: 10px;
+    background-color: lightgray;
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h4{
+   margin-top: 18px;
+   text-decoration: underline;
+  font-size: 18px;
+  margin-left: 20px;
+}
+form{
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 15px;
+  height: 100%;
+}
+button{
+  margin-top: 5px;
+  border: 1px solid black;
+  background-color: white;
+  font-size: 20px;
+  width: 200px;
+}
+
+.top{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
+#backhome{
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+}

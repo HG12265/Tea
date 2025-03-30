@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="order.css">
+    <title>Your Order</title>
+    <script type="text/javascript">
+        function findcost() {
+            var normal = document.getElementById("normal");
+            var black = document.getElementById("black");
+            var green = document.getElementById("green");
+            var herbal = document.getElementById("herbal");
+            var normal1 = document.getElementById("normal1");
+            var black1 = document.getElementById("black1");
+            var cold = document.getElementById("cold");
+            var cappuccino = document.getElementById("cappuccino");
+            var s = "Item \t \t \t Price \n--------------------------------------\n";
+            var totalcost = 0;
+
+            // Loop through major items (multiple selections)
+            for (var i = 0; i < normal.options.length; i++) {
+                var option = normal.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t \t" + price + "\n";
+                }
+            }
+
+            // Loop through starters items (multiple selections)
+            for (var i = 0; i < black.options.length; i++) {
+                var option = black.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t \t" + price + "\n";
+                }
+            }
+
+            // Loop through soft drinks and snacks (multiple selections)
+            for (var i = 0; i < green.options.length; i++) {
+                var option = green.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t \t" + price + "\n";
+                }
+            }
+
+            // Loop through coffee items (multiple selections)
+            for (var i = 0; i < herbal.options.length; i++) {
+                var option = herbal.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t \t" + price + "\n";
+                }
+            }
+                 for (var i = 0; i < normal1.options.length; i++) {
+                var option = normal1.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t" + price + "\n";
+                }
+            }
+                      for (var i = 0; i < black1.options.length; i++) {
+                var option = black1.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t \t" + price + "\n";
+                }
+            }
+
+                           for (var i = 0; i < cold.options.length; i++) {
+                var option = cold.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t \t" + price + "\n";
+                }
+            }
+                                for (var i = 0; i < cappuccino.options.length; i++) {
+                var option = cappuccino.options[i];
+                if (option.selected == true) {
+                    var price = parseInt(option.value);
+                    totalcost += price;
+                    s += option.text + "\t \t \t" + price + "\n";
+                }
+            }
+            // Display total cost
+            s += "\n\n Total Cost \t \t \t" + totalcost;
+            document.getElementById("ordereditems").value = s;
+        }
+    </script>
+</head>
+<body>
+    <h1>JusTea Sip</h1>
+    <header>
+        <img class="logo" src="/storage/emulated/0/Web project/images/logo.jpg" width="70px" height="59px">
+        <h2 class="welcome">Welcome To Our Shop</h2>
+    </header> 
+    <h3>Order Section</h3>
+    <h4>Please Fill These Options For Order</h4>
+    <div>
+        <form name="menuForm" action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+        <input type="hidden" name="access_key" value="f353285a-c2a9-405c-b3db-47754b5171f9">
+            <p>
+                <label for="firstname">First Name &nbsp&nbsp &nbsp</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Enter Name" required>
+            </p>
+            <p>
+                <label for="lastname">Last Name &nbsp&nbsp &nbsp</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Enter Name" required>
+            </p>
+            <p>
+                <label for="mail">Your Mail &nbsp &nbsp &nbsp &nbsp</label>
+                <input type="email" name="mail" id="mail" placeholder="Enter Mail" required>
+            </p>
+            <p>
+                <label for="address">Address &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <input type="text" name="address" id="address" placeholder="Address" required>
+            </p>
+            <p>
+                <label for="mobile">Number &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <input type="number" name="mobile" id="mobile" placeholder="Address" required>
+            </p>
+            <h2 class="top">Tea Section</h2>
+            <p>
+                <label for="normal">Normal Tea &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <select name="Normal Tea - 1" id="normal" size="1" multiple="multiple">
+                    <option value="15">Normal Tea </option>                
+                </select>
+            </p>
+            <p>
+                <label for="black">Black Tea &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <select name="Black Tea - 1" id="black" size="1" multiple="multiple">
+                    <option value="10">Black Tea </option>               
+                </select>
+            </p>
+            <p>
+                <label for="green">Green Tea&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</label>
+                <select name="Green Tea - 1" id="green" size="1" multiple="multiple">
+                    <option value="40">Green Tea </option>               
+                </select>           
+            </p>
+            <p>
+                <label for="herbal">Herbal Tea &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</label>
+                <select name="Herbal Tea - 1" id="herbal" size="1" multiple="multiple">
+                    <option value="80">Herbal Tea </option>               
+                </select>           
+            </p>
+            <h2 class="top">Coffee Section</h2>
+            <p>
+                <label for="normal1"> Normal coffee &nbsp&nbsp &nbsp &nbsp &nbsp</label>
+                <select name="Normal coffee - 1" id="normal1" size="1" multiple="multiple">
+                    <option value="15">Normal Coffee </option>                
+                </select>
+            </p>
+            <p>
+                <label for="black1">Black coffee &nbsp&nbsp&nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <select name="Black coffee - 1" id="black1" size="1" multiple="multiple">
+                    <option value="10">Black Coffee </option>               
+                </select>
+            </p>
+            <p>
+                <label for="cold">cold coffee &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+                <select name="cold coffee - 1" id="cold" size="1" multiple="multiple">
+                    <option value="40">Cold Coffee </option>               
+                </select>           
+            </p>
+            <p>
+                <label for="cappuccino">cappuccino &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp</label>
+                <select name="cappuccino - 1" id="cappuccino" size="1" multiple="multiple">
+                    <option value="100">Cappuccino </option>               
+                </select>           
+            </p>
+            <h2 class="top">Your Order Details</h2>
+            <p>
+                <textarea id="ordereditems" rows="15" cols="38" readonly></textarea>
+            </p>
+            <p>
+                <button type="button" value="Find Total Cost" onclick="findcost()">Find Total Cost</button>
+                <button type="reset" value="Clear">reset</button>&nbsp &nbsp &nbsp<a id="backhome" href="tea shop.html">BACK TO HOME</a>
+            </p>
+            <p>
+            <button type="submit">Place Order</button>
+           </p>  
+        </form>
+        
+    </div>
+</body>
+</html>
